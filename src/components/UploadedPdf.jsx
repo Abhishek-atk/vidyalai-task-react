@@ -19,7 +19,7 @@ function UploadedPdf() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:4000/uploaded-pdf", {
+      .get("https://vidyalai-task-api.onrender.com/uploaded-pdf", {
         headers: {
           token: cookieExist,
         },
@@ -27,7 +27,7 @@ function UploadedPdf() {
       .then((response) => {
         console.log(response.data.files);
         setPdfFiles(response.data.files);
-        setFileLengeth(response.data.files.length)
+        setFileLengeth(response.data.files.length);
       })
       .catch((error) => {
         console.error("Error fetching PDF files:", error);

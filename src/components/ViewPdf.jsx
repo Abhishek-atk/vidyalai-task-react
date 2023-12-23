@@ -54,7 +54,7 @@ function ViewPdf({ getSelectedPage, fileName }) {
       <Toaster />
       <div style={{ overflowX: "hidden" }}>
         <Document
-          file={`http://localhost:4000/uploads/${fileName}`}
+          file={`https://vidyalai-task-api.onrender.com/uploads/${fileName}`}
           onLoadSuccess={onDocumentLoadSuccess}
         >
           <div className="row mt-3">
@@ -94,7 +94,7 @@ function ViewPdf({ getSelectedPage, fileName }) {
             padding: "10px",
             background: "#f8f9fa",
             border: "black solid 1px",
-              zIndex: "999"
+            zIndex: "999",
           }}
         >
           <p>Selected Pages: {selectedPages.join(", ")}</p>

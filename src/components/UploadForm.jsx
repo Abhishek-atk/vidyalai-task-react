@@ -34,7 +34,7 @@ function UploadForm({ getFileName }) {
       formData.append("file", selectedFile);
       try {
         const response = await axios
-          .post("http://localhost:4000/upload", formData, {
+          .post("https://vidyalai-task-api.onrender.com/upload", formData, {
             headers: {
               token: cookieExist,
             },

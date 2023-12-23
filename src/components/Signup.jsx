@@ -35,7 +35,7 @@ function Signup() {
     Cookies.remove("token");
     e.preventDefault();
     axios
-      .post("http://localhost:4000/signup", { userData })
+      .post("https://vidyalai-task-api.onrender.com/signup", { userData })
       .then((res) => {
         if (res.data.signup) {
           Cookies.set("token", res.data.token, {

@@ -49,7 +49,7 @@ function DownloadPdf({ selectedPage, fileName }) {
     >
       <div id="pdf">
         <Document
-          file={`http://localhost:4000/uploads/${fileName}`}
+          file={`https://vidyalai-task-api.onrender.com/uploads/${fileName}`}
           onLoadSuccess={onDocumentLoadSuccess}
           style={{
             margin: "auto",
